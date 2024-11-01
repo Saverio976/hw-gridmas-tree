@@ -13,7 +13,11 @@ class PixelDriver(ABC):
         while not self.queue.empty():
             self.queue.get()
 
+    def init(self):
+        return
+
     def run(self):
+        self.init()
         cur_fps = 45
         start_time = time.perf_counter()
 
